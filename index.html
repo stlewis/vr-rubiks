@@ -5,21 +5,68 @@
     <title>ES6 Boilerplate</title>
     <meta name="description" content="ES6 Boilerplate">
     <script src='./build/bundle.js'></script>
+    <script src='./src/components/cubelet.js'></script>
+    <script src='./src/primitives/a-cubelet.js'></script>
   </head>
   <body>
-    <a-scene>
-      <!-- Camera Rig -->
-      <a-entity id="rig" position="0 0 0">
-        <a-entity camera
+    <a-scene background='color: black;'>
+
+      <a-entity
+        scale='0.025 0.025 0.025'
+        position='0 1.5 0'
+        rotation='-45 -45 -45'
+        >
+
+        <!-- Top -->
+
+        <a-cubelet cubeIndex='0' position='0 3 -4.04' top='white' left='green' back='orange'></a-cubelet>
+        <a-cubelet cubeIndex='1' position='1.02 3 -4.04' top='white' back='orange'></a-cubelet>
+        <a-cubelet cubeIndex='2' position='2.04 3 -4.04' top='white', right='blue' back='orange'></a-cubelet>
+
+        <a-cubelet cubeIndex='3' position='0 3 -3.02' top='white' left='green'></a-cubelet>
+        <a-cubelet cubeIndex='4' position='1.02 3 -3.02' top='white'></a-cubelet>
+        <a-cubelet cubeIndex='5' position='2.04 3 -3.02' top='white', right='blue'></a-cubelet>
+
+        <a-cubelet cubeIndex='6' position='0 3 -2' front='red' top='white' left='green'></a-cubelet>
+        <a-cubelet cubeIndex='7' position='1.02 3 -2' front='red' top='white'></a-cubelet>
+        <a-cubelet cubeIndex='8' position='2.04 3 -2' front='red' top='white' right='blue'></a-cubelet>
+
+        <!-- Middle -->
+        <a-cubelet cubeIndex='9' position='0 1.98 -4.04' left='green' back='orange'></a-cubelet>
+        <a-cubelet cubeIndex='10' position='1.02 1.98 -4.04' back='orange'></a-cubelet>
+        <a-cubelet cubeIndex='11' position='2.04 1.98 -4.04' right='blue' back='orange'></a-cubelet>
+
+        <a-cubelet cubeIndex='12' position='0 1.98 -3.02' left='green'></a-cubelet>
+        <a-cubelet cubeIndex='13' position='1.02 1.98 -3.02'></a-cubelet>
+        <a-cubelet cubeIndex='14' position='2.04 1.98 -3.02' right='blue'></a-cubelet>
+
+        <a-cubelet cubeIndex='15' position='0 1.98 -2' front='red' left='green'></a-cubelet>
+        <a-cubelet cubeIndex='16' position='1.02 1.98 -2' front='red'></a-cubelet>
+        <a-cubelet cubeIndex='17' position='2.04 1.98 -2' front='red' right='blue'></a-cubelet>
+
+        <!-- Bottom -->
+        <a-cubelet cubeIndex='18' position='0 0.96 -4.04' left='green' bottom='yellow' back='orange'></a-cubelet>
+        <a-cubelet cubeIndex='19' position='1.02 0.96 -4.04' bottom='yellow' back='orange'></a-cubelet>
+        <a-cubelet cubeIndex='20' position='2.04 0.96 -4.04' right='blue' bottom='yellow' back='orange'></a-cubelet>
+
+        <a-cubelet cubeIndex='21' position='0 0.96 -3.02' left='green' bottom='yellow'></a-cubelet>
+        <a-cubelet cubeIndex='22' position='1.02 0.96 -3.02' bottom='yellow'></a-cubelet>
+        <a-cubelet cubeIndex='23' position='2.04 0.96 -3.02' right='blue' bottom='yellow'></a-cubelet>
+
+        <a-cubelet cubeIndex='24' position='0 0.96 -2' front='red' left='green' bottom='yellow'></a-cubelet>
+        <a-cubelet cubeIndex='25' position='1.02 0.96 -2' front='red' bottom='yellow'></a-cubelet>
+        <a-cubelet cubeIndex='26' position='2.04 0.96 -2' front='red' right='blue' bottom='yellow'></a-cubelet>
+      </a-entity>
+
+
+
+
+        <a-entity wasd-controls
+                  camera
                   position='0 1.6 0'
                   rotation='0 0 0'
-                  look-controls="pointerLockEnabled: true">
-          <a-cursor color='red'></a-cursor>
-        </a-entity>
-      </a-entity>
-      <!-- End Camera Rig -->
+                  look-controls="pointerLockEnabled: false"></a-entity>
 
-      <a-box color='blue' position='0 0 -5'></a-box>
     </a-scene>
   </body>
 </html>

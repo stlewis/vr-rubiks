@@ -5,7 +5,10 @@ require('aframe');
 
 require('aframe-state-component');
 
-},{"aframe":3,"aframe-state-component":2}],2:[function(require,module,exports){
+require('./src/state.js'); //require('./src/components/cubelet.js')
+//require('./src/primitives/a-cubelet.js')
+
+},{"./src/state.js":6,"aframe":3,"aframe-state-component":2}],2:[function(require,module,exports){
 (function webpackUniversalModuleDefinition(root, factory) {
 	if(typeof exports === 'object' && typeof module === 'object')
 		module.exports = factory();
@@ -82797,5 +82800,8 @@ process.chdir = function (dir) {
     throw new Error('process.chdir is not supported');
 };
 process.umask = function() { return 0; };
+
+},{}],6:[function(require,module,exports){
+"use strict";
 
 },{}]},{},[1]);
