@@ -6,16 +6,49 @@
     <meta name="description" content="ES6 Boilerplate">
     <script src='./build/bundle.js'></script>
     <script src='./src/components/cubelet.js'></script>
+    <script src='./src/components/grouper.js'></script>
     <script src='./src/primitives/a-cubelet.js'></script>
   </head>
   <body>
     <a-scene background='color: black;'>
 
       <a-entity
+        id='the-cube'
         scale='0.025 0.025 0.025'
-        position='0 1.5 -0.75'
-        rotation='-45 -45 -45'
-        >
+        position='0 1.5 -0.75'>
+
+        <a-entity
+
+          grouper id='u-group'
+          position='1.02 3 -3.04'
+          material='opacity: 0;'
+          geometry='primitive: box; height: 1; width: 3; depth: 3'
+          ></a-entity>
+
+        <a-entity grouper id='e-group'>
+        </a-entity>
+
+        <a-entity grouper id='d-group'>
+        </a-entity>
+
+        <a-entity grouper id='l-group'>
+        </a-entity>
+
+        <a-entity grouper id='m-group'>
+        </a-entity>
+
+        <a-entity grouper id='r-group'>
+        </a-entity>
+
+        <a-entity grouper id='f-group'>
+        </a-entity>
+
+        <a-entity grouper id='s-group'>
+        </a-entity>
+
+        <a-entity grouper id='b-group'>
+        </a-entity>
+
 
         <!-- Top -->
 
@@ -65,7 +98,9 @@
                   camera
                   position='0 1.6 0'
                   rotation='0 0 0'
-                  look-controls="pointerLockEnabled: false"></a-entity>
+                  look-controls="pointerLockEnabled: false">
+                    <a-entity cursor='fuse: false;' raycaster="objects: [grouper];" geometry="primitive: ring; radiusOuter: 0.0005; radiusInner: 0.00005" material='color: red;' position='0 0 -0.05'></a-entity>
+        </a-entity>
 
     </a-scene>
   </body>

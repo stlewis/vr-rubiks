@@ -18,7 +18,7 @@ AFRAME.registerPrimitive('a-cubelet', extendDeep({}, meshMixin, {
 
   mappings: {
     top: 'cubelet.top',
-    bottom: 'cubelet.bottom',
+    down: 'cubelet.bottom',
     right: 'cubelet.right',
     left: 'cubelet.left',
     back: 'cubelet.back',
